@@ -12,5 +12,6 @@
   "hubot-ascii-art",
   "hubot-gitlab-connector",
   "hubot-httpdog",
-  "hubot-plusplus"
+  "hubot-plusplus",
+  "hubot-caniuse"
 ]
