@@ -8,5 +8,9 @@
   "hubot-maps",
   "hubot-redis-brain",
   "hubot-rules",
-  "hubot-shipit"
+  "hubot-shipit",
+  "hubot-ascii-art",
+  "hubot-gitlab-connector",
+  "hubot-httpdog",
+  "hubot-plusplus"
 ]
