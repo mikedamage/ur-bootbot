@@ -10,6 +10,7 @@
     "hubot-ascii-art": "^1.1.3",
     "hubot-caniuse": "^1.0.3",
     "hubot-diagnostics": "0.0.2",
+    "hubot-dotenv": "^1.0.0",
     "hubot-gitlab-connector": "0.0.8",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
@@ -24,9 +25,14 @@
     "hubot-rules": "^0.1.2",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-slack": "^4.4.0"
+    "hubot-slack": "^4.4.0",
+    "replify": "^1.2.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": ">= 8.0.0"
+  },
+  "scripts": {
+    "start": "hubot-dotenv -n urbot",
+    "slack": "hubot-dotenv -n urbot --adapter slack"
   }
 }
