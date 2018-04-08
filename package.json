@@ -1,6 +1,6 @@
 {
   "name": "bootbot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "author": "Mike Green <mike.is.green@gmail.com>",
   "description": "Assistive chat-based lifeform",
@@ -35,5 +35,7 @@
   "scripts": {
     "start": "hubot-dotenv -n urbot",
     "slack": "hubot-dotenv -n urbot --adapter slack"
-  }
+  },
+  "license": "MIT",
+  "repository": "github:mikedamage/ur-bootbot"
 }
