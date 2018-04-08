@@ -3,6 +3,7 @@
 by Mike Green
 
 Copyright (C) 2018 Trilogy Education Services
+
 Released under the terms of the [MIT License](LICENSE)
 
 urbot is a chat bot built on the [Hubot][hubot] framework. It was
