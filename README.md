@@ -59,6 +59,13 @@ rc /tmp/repl/urbot.sock # connect to the REPL socket using repl-client
 # The path to the socket might be different than the above on Windows
 ```
 
+Once connected, you'll see a JS console. The bot instance is available as the `app` variable.
+
+```
+urbot> app.name
+"urbot"
+```
+
 ### Configuration
 
 A few scripts (including some installed by default) require environment
