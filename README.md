@@ -26,8 +26,10 @@ included in the repo, however, so as not to expose sensitive information.
 
 You can start urbot locally by running:
 
-    % npm install # first-run only
-    % npm start
+```sh
+npm install # first-run only
+npm start
+```
 
 You'll see some start up output and a prompt:
 
@@ -40,6 +42,22 @@ Then you can interact with urbot by typing `urbot help`.
     urbot animate me <query> - The same thing as `image me`, except adds [snip]
     urbot help - Displays all of the help commands that urbot knows about.
     ...
+
+#### Development Mode REPL Console
+
+urbot starts a JavaScript REPL using the [replify](https://www.npmjs.com/package/replify) NPM module. You can connect to this
+console to run arbitrary JS code and interact with the running bot instance using the
+[repl-client](https://www.npmjs.com/package/repl-client) module (installed globally).
+
+On Mac and Linux systems, you'd do the following:
+
+```sh
+# inside the urbot project directory
+npm install -g repl-client # only required once
+npm start # start the bot process
+rc /tmp/repl/urbot.sock # connect to the REPL socket using repl-client
+# The path to the socket might be different than the above on Windows
+```
 
 ### Configuration
 
