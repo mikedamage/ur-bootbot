@@ -11,5 +11,6 @@
   "hubot-gitlab-connector",
   "hubot-httpdog",
   "hubot-plusplus",
-  "hubot-caniuse"
+  "hubot-caniuse",
+  "hubot-auth"
 ]
