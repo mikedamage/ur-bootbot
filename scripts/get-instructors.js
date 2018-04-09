@@ -19,13 +19,5 @@ module.exports = (robot) => {
     const response = users.map((user) => `Name: ${user.real_name}, Username: ${user.name}`).join('\n');
     res.send(response);
   });
-
-  robot.respond(/instructors add (.+)/, { id: 'instructors.add' }, async (res) => {
-
-  });
-
-  robot.respond(/assistants add (.+)/, { id: 'assistants.add' }, async (res) => {
-
-  });
 };
 
