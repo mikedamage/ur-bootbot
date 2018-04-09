@@ -14,7 +14,7 @@ module.exports = (robot) => {
     return instructors;
   }
 
-  robot.hear(/@urbot instructors/i, { id: 'instructors.list' }, async (res) => {
+  robot.hear(/@urbot instructors/i, { id: 'instructor.list' }, async (res) => {
     const users = await getInstructors();
     const response = users.map((user) => `Name: ${user.real_name}, Username: ${user.name}`).join('\n');
     res.send(response);
