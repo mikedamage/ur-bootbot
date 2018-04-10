@@ -1,4 +1,5 @@
 const CountdownTimer = require('../lib/countdown-timer');
+
 module.exports = (robot) => {
   if (robot.adapterName !== 'slack') {
     robot.logger.warn('Not using slack adapter. Not initializing instructor commands.');
