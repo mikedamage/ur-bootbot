@@ -6,7 +6,7 @@ module.exports = (robot) => {
     return;
   }
 
-  async function getInstructors() {
+  function getInstructors() {
     return robot.auth.usersWithRole('instructor')
   }
 
