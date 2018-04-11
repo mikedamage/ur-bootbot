@@ -11,13 +11,13 @@ module.exports = (robot) => {
     const { name: userName } = ctx.response.message.user;
     const user = robot.brain.userForName(userName);
 
-    if ((/^instructor\./).test(ctx.listener.options.id) && !isInstructor(user)) {
+    if (ctx.listener.options.id.startsWith('instructor.') && !isInstructor(user)) {
       robot.logger.info(`${user.real_name} tried to run an instructor command without authorization.`);
       ctx.response.reply(`I can't let you do that, Dave.`);
       done();
     }
 
-    if ((/^assistant\./).test(ctx.listener.options.id) && !isInstructionalTeam(user)) {
+    if (ctx.listener.options.id.startsWith('assistant.') && !isInstructionalTeam(user)) {
       robot.logger.info(`${user.real_name} tried to run an assistant command without authorization.`);
       ctx.response.reply(`Where'd you get this awful fake ID? I'm not buying it.`);
       done();
