@@ -1,3 +1,4 @@
+const yargs = require('yargs');
 const CountdownTimer = require('../lib/countdown-timer');
 
 module.exports = (robot) => {
@@ -16,9 +17,24 @@ module.exports = (robot) => {
     res.send(response);
   });
 
-  robot.hear(/urbot timer (\d+) (.+)/, { id: 'instructor.timer' }, (res) => {
-    const timer = new CountdownTimer(res.match[1], { units: res.match[2] });
-    timer.on('start', (duration) => res.reply(`Started timer for ${res.match[1]} ${res.match[2]} (${duration.as('milliseconds')}ms)`));
+  robot.respond(/activity (\d+)/, { id: 'instructor.activity' }, (res) => {
+    const args = yargs
+      .options({
+        u: {
+          alias: 'units',
+          default: 'minutes',
+          type: 'string',
+        },
+        r: {
+          alias: 'resolution',
+          default: 1000,
+          type: 'number',
+        },
+      })
+      .parse(res.message.text);
+    const { units, resolution } = args;
+    const timer = new CountdownTimer(parseInt(res.match[1], 10), { units, resolution });
+    timer.on('start', (duration) => res.reply(`Started timer for ${res.match[1]} ${units} (${duration.as('milliseconds')}ms)`));
     timer.on('done', () => res.reply('Timer done!'));
     timer.start();
   });
