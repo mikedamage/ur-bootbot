@@ -11,6 +11,8 @@ module.exports = (robot) => {
     const { name: userName } = ctx.response.message.user;
     const user = robot.brain.userForName(userName);
 
+    if (!ctx.listener.options.id) return next(done);
+
     if (ctx.listener.options.id.startsWith('instructor.') && !isInstructor(user)) {
       robot.logger.info(`${user.real_name} tried to run an instructor command without authorization.`);
       ctx.response.reply(`I can't let you do that, Dave.`);

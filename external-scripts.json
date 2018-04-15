@@ -12,5 +12,9 @@
   "hubot-httpdog",
   "hubot-plusplus",
   "hubot-caniuse",
-  "hubot-auth"
+  "hubot-auth",
+  "hubot-darksky",
+  "hubot-tell",
+  "hubot-dogeme",
+  "hubot-qr"
 ]
